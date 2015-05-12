@@ -1,0 +1,11 @@
+.footer {
+	text-align: center;
+	margin: 10px 0 20px 0;
+	@include font-size(14px);
+	a {
+		@include font-size(14px);
+		color: black;
+	}
+}
+
+

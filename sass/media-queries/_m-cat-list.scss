@@ -1,0 +1,67 @@
+@media screen and (max-width: 1000px) {
+	.cat-sort {
+		width: 100%;
+		height: 100%;
+		float: none;
+		text-align: center;
+		padding: 15px 0 0 0;
+	}
+	.cat-view {
+		width: 100%;
+		height: 100%;
+		padding-bottom: 10px;
+		float: none;
+		text-align: center;
+		span {
+			display: inline-block;
+			vertical-align: middle;
+			padding: 0;
+			float: none;
+		}
+		ul {
+			display: inline-block;
+			vertical-align: middle;
+			float: none;
+		}
+		input[type="text"],
+		input[type="submit"] {
+			display: inline-block;
+			vertical-align: middle;
+			float: none;
+		}
+	}
+	.cat-wrapper, .cat-list-wrapper {
+		text-align: center;
+		.cat-list-item {
+			display: inline-block;
+			float: none;
+		}
+	}
+	.pagination {
+		float: none;
+		text-align: center;
+		margin-right: 0;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.cat-view {
+		span {
+			display: block;
+		}
+		ul {
+			display: block;
+			margin: 10px 0;
+		}
+		input[type="text"],
+		input[type="submit"] {
+			margin: 10px 0;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.pagination li {
+		padding: 10px 20px;
+	}	
+}

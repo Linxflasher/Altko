@@ -1,0 +1,22 @@
+@media screen and (max-width:1000px) {
+	.map {
+		float: none;
+		margin: 0 auto;
+		max-width: 600px;
+		width: 90%;
+	}
+	.contact-info {
+		float: none;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width:400px) {
+	.contact-info p {
+		@include font-size(16px);
+	}	
+	.contact-info .c-phone:after, .contact-info .c-email:after, .contact-info .c-mobile:after, .contact-info .c-skype:after, .contact-info .c-address:after {
+		width: 0;
+		height: 0;
+	}
+}

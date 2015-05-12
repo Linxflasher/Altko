@@ -1,0 +1,146 @@
+
+// Rem with px fallback
+
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+
+// Retina background images
+
+@mixin background-image-retina($file, $type, $width, $height) {
+  background-image: url($file + '.' + $type);
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (-moz-min-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx){
+    & {
+      background-image: url($file + '@2x.' + $type);
+      -webkit-background-size: $width $height;
+      -moz-background-size: $width $height;
+      -o-background-size: $width $height;
+      background-size: $width $height;
+    }
+  }
+}
+
+
+// Анимация
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}
+
+@mixin keyframes($animationName)
+{
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName}  {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+
+@mixin inline-block {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+@mixin box-shadow($box-shadow) {
+-moz-box-shadow:$box-shadow;
+-webkit-box-shadow:$box-shadow;
+-o-box-shadow:$box-shadow;
+-ms-box-shadow:$box-shadow;
+box-shadow: $box-shadow;
+}
+
+@mixin box-sizing($box-sizing) {
+	-webkit-box-sizing: $box-sizing;
+	-moz-box-sizing: $box-sizing;
+	-ms-box-sizing: $box-sizing;
+	box-sizing: $box-sizing;
+}
+
+@mixin gradient($gradient, $fallback, $pie: false) {
+	background: $fallback;
+	background: -webkit-linear-gradient($gradient);
+	background: -moz-linear-gradient($gradient);
+	background: -o-linear-gradient($gradient);
+	background: -ms-linear-gradient($gradient);
+	background: linear-gradient($gradient);
+	@if $pie == true {
+		-pie-background: linear-gradient($gradient);
+		@include pie;
+	}
+}
+@mixin simple-gradient($direction, $color1, $color1pos, $color2, $color2pos) {
+	background: $color1;
+	background: -webkit-linear-gradient($direction, $color1 $color1pos, $color2 $color2pos);
+	background: -moz-linear-gradient($direction, $color1 $color1pos, $color2 $color2pos);
+	background: -o-linear-gradient($direction, $color1 $color1pos, $color2 $color2pos);
+	background: -ms-linear-gradient($direction, $color1 $color1pos, $color2 $color2pos);
+	background: linear-gradient($direction, $color1 $color1pos, $color2 $color2pos);
+	-pie-background: linear-gradient($direction, $color1 $color1pos, $color2 $color2pos);
+	@include pie;
+}
+
+@mixin transition($transition) {
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	-o-transition: $transition;
+	-ms-transition: $transition;
+	transition: $transition;
+}
+
+@mixin transform($transform) {
+	-webkit-transform: $transform;
+	-moz-transform: $transform;
+	-o-transform: $transform;
+	-ms-transform: $transform;
+	transform: $transform;
+}
+
+@mixin pie { behavior: $pie; }
+
+@mixin group {
+	&:before, &:after { content: ""; display: table; }
+	&:after { clear: both; }
+	& { *zoom: 1; }
+}
+@mixin icons {
+background-image:$icons;
+background-repeat: no-repeat;
+}
+
+
+@mixin breakpoint($point) {
+     @if $point == desktop-large {
+          @media (max-width: 1280px) { @content; }
+     }
+     @if $point == desktop-standart {
+          @media (max-width: 1000px) { @content; }
+     }
+     @if $point == desktop-small {
+          @media (max-width: 800px) { @content; }
+     }
+}

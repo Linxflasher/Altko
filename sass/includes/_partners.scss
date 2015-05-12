@@ -1,0 +1,45 @@
+.partner-item {
+	text-align: center;
+	margin-bottom: 25px;
+	padding-bottom: 25px;
+	border-bottom: 1px solid $light-gray;
+	&:last-child {
+		border-bottom: none;
+	}
+	p {
+		@include font-size(18px);
+		color: $dark-gray;
+		display: block;
+	}
+	.partner-link {
+		display: block;
+		margin: 25px auto 0 auto;
+		width: 350px;
+		padding: 20px 10px;
+		border: 1px solid $light-gray;
+		border-radius: 3px;
+		@include font-size(18px);
+		color: $dark-gray;
+		text-decoration: none;
+		text-align: center;
+		position: relative;
+		&:after {
+			  content: '\00bb';
+			  position: absolute;
+			  top: 6px;
+			  right: 5%;
+			  font-size: 35px;
+			  color: $green;
+		}
+		&:hover {
+			border: 1px solid $azure;
+		}
+	}
+}
+
+@media screen and (max-width:1000px) {
+	.partner-item .partner-link {
+		max-width: 350px;
+		width: 90%;
+	}
+}

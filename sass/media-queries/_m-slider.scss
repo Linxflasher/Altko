@@ -1,0 +1,16 @@
+@media screen and (max-width:980px) {
+	.s-bg-1:before, .s-bg-2:before {
+		background: none;
+	}
+	.s-content {
+		margin: 55px auto;
+		
+	}
+}
+
+
+@media screen and (max-width:600px) {
+	.slider {
+		display: none;
+	}	
+}

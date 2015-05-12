@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'Officina';
+  src: url('#{$fonts}OfficinaSerifC-Book-webfont.eot'); 
+  src: url('#{$fonts}OfficinaSerifC-Book-webfont.eot?#iefix') format('embedded-opentype'), 
+       url('#{$fonts}OfficinaSerifC-Book-webfont.woff2') format('woff2'), 
+       url('#{$fonts}OfficinaSerifC-Book-webfont.woff') format('woff'), 
+       url('#{$fonts}OfficinaSerifC-Book-webfont.ttf')  format('truetype'), 
+       url('#{$fonts}OfficinaSerifC-Book-webfont.svg#svgFontName') format('svg'); 
+}
+

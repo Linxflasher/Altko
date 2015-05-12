@@ -1,0 +1,195 @@
+.cat-sort {
+	width: 329px;
+	height: 52px;
+	background: $green;
+	margin-right: 1px;
+	padding: 15px 10px 0 10px;
+	p {
+		color: white;
+		@include font-size(14px);
+		padding-top: 2px;
+		a {
+			color: white;
+			font-weight: bold;
+			&:hover {
+				color: $dark-gray;
+			}
+		}
+		.cat-alph {
+			padding: 0 10px;
+			border-right: 1px solid #FFF;
+		}
+		.cat-new {
+			padding-left: 5px;
+		}
+	}
+}
+
+.cat-view {
+	width: 670px;
+	height: 52px;
+	background: $green;
+	padding: 15px 10px 0 10px;
+	&:after {
+		@extend .clearfix;
+	}
+	span {
+		color: white;
+		@include font-size(14px);
+		display: block;
+		float: left;
+		padding-top: 2px;
+	}
+	ul {
+		display: block;
+		margin-left: 5px;
+		float: left;
+		li {
+			display: inline-block;
+			padding: 0 10px;
+			border-left: 1px solid #FFF;
+			&:first-child {
+				border-left: none;
+			}
+			a {
+				color: white;
+				@include font-size(14px);
+				font-weight: bold;
+				&:hover {
+					color: $dark-gray;
+				}
+			}
+		}
+	}
+	input[type="text"],
+	input[type="submit"] {
+		display: block;
+		float: left;
+		color: $dark-gray;
+		font-size: 14px;
+	}
+	input[type="text"].cat-find {
+		width: 270px;
+		height: 25px;
+		line-height: normal;
+	}
+	input[type="submit"].cat-search {
+		width: 34px;
+		height: 25px;
+		margin-left: 10px;
+		line-height: normal;
+		background-color: white;
+		@include background-image-retina(#{$img}magnify,png,17px,17px);
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+	}
+}
+
+input[type="text"].cat-find::-webkit-input-placeholder {
+	color: $dark-gray;
+	font-family: $font1;
+	@include font-size(14px);
+}
+
+input[type="text"].cat-find:-moz-placeholder {
+	/* Firefox 18- */
+	
+	color: $dark-gray;
+	font-family: $font1;
+	@include font-size(14px);
+	opacity: 1;
+}
+
+input[type="text"].cat-find::-moz-placeholder {
+	/* Firefox 19+ */
+	
+	color: $dark-gray;
+	font-family: $font1;
+	@include font-size(14px);
+	opacity: 1;
+}
+
+input[type="text"].cat-find:-ms-input-placeholder {
+	color: $dark-gray;
+	font-family: $font1;
+	@include font-size(14px);
+}
+
+input[type="text"].cat-find:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+/* Mozilla Firefox 4 to 18 */
+
+input[type="text"].cat-find:focus:-moz-placeholder {
+	color: transparent;
+}
+/* Mozilla Firefox 19+ */
+
+input[type="text"].cat-find:focus::-moz-placeholder {
+	color: transparent;
+}
+/* Internet Explorer 10+ */
+
+input[type="text"].cat-find:focus:-ms-input-placeholder {
+	color: transparent;
+}
+
+.cat-list-wrapper {
+	margin: 20px 0;
+	padding: 0 50px 0 15px;
+	border-left: 2px solid $light-gray;
+	border-right: 2px solid $light-gray;
+	&:after {
+		@extend .clearfix;
+	}
+	.cat-list-item {
+		width: 156px;
+		float: left;
+		margin: 20px 0 0 30px;
+		img {
+			display: block;
+			border: 1px solid $light-gray;
+			overflow: hidden;
+			height: 188px;
+		}
+		p {
+			margin-top: 3px;
+			font-weight: bold;
+			color: black;
+			text-align: center;
+		}
+		a {
+			display: block;
+			background: $azure;
+			margin-top: 3px;
+			padding: 2px;
+			text-align: center;
+			font-weight: bold;
+			color: white;
+			@include font-size(14px);
+			&:hover {
+				color: $dark-gray;
+			}
+		}
+	}
+}
+
+
+.pagination {
+	display: block;
+	float: right;
+	margin-right: 48px;
+	li {
+		display: inline-block;
+		padding: 0 5px;
+		a {
+			color: $dark-gray;
+			@include font-size(14px);
+			font-weight: bold;
+			text-decoration: none;
+			&:hover {
+				color: $green;
+			}
+		}
+	}
+}

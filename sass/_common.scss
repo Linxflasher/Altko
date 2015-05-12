@@ -1,0 +1,232 @@
+html {
+	min-width: 20rem;
+	box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: $font1;
+	@include font-size(16px);
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 1000px;
+	margin: 40px auto 0 auto;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+ul {
+	list-style: none;
+}
+
+h1,
+.h1 {
+	@include font-size(36px);
+	color: $dark-gray;
+	font-weight: normal;
+}
+
+h2,
+.h2 {
+	@include font-size(36px);
+	color: $dark-gray;
+	font-weight: normal;
+}
+
+h3,
+.h3 {
+	@include font-size(24px);
+	color: $dark-gray;
+}
+
+h4,
+.h4 {}
+
+h5,
+.h5 {}
+
+h6,
+.h6 {}
+
+.h1-lines, .content h1.h1-lines {
+	display: block;
+	text-align: center;
+	margin-bottom: 25px;
+	color: $dark-gray;
+}
+
+p {
+	@include font-size(14px);
+	color: $text;
+}
+
+input[type="text"] {
+	padding-left: 15px;
+	@include font-size(14px);
+	color: $azure;
+	border: none;
+	outline: none;
+}
+
+input[type="submit"] {
+	background-color: $azure;
+	@include font-size(14px);
+	text-align: center;
+	color: white;
+	border: none;
+	outline: none;
+}
+
+::-webkit-input-placeholder {
+	color: $azure;
+	font-family: $font1;
+	@include font-size(14px);
+}
+
+:-moz-placeholder {
+	/* Firefox 18- */
+	
+	color: $azure;
+	font-family: $font1;
+	@include font-size(14px);
+	opacity: 1;
+}
+
+::-moz-placeholder {
+	/* Firefox 19+ */
+	
+	color: $azure;
+	font-family: $font1;
+	@include font-size(14px);
+	opacity: 1;
+}
+
+:-ms-input-placeholder {
+	color: $azure;
+	font-family: $font1;
+	@include font-size(14px);
+}
+/* WebKit browsers */
+
+input:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+/* Mozilla Firefox 4 to 18 */
+
+input:focus:-moz-placeholder {
+	color: transparent;
+}
+/* Mozilla Firefox 19+ */
+
+input:focus::-moz-placeholder {
+	color: transparent;
+}
+/* Internet Explorer 10+ */
+
+input:focus:-ms-input-placeholder {
+	color: transparent;
+}
+
+.group {
+	@include group;
+}
+
+.hidden {
+	display: none;
+}
+
+.inline {
+	display: inline;
+}
+
+.block {
+	display: block;
+}
+
+.inline-block {
+	@include inline-block;
+}
+
+.relative {
+	position: relative;
+}
+
+.absolute {
+	position: absolute;
+}
+
+.center,
+.centeralign {
+	text-align: center;
+}
+
+.rightalign {
+	text-align: right;
+}
+
+.leftalign {
+	text-align: left;
+}
+
+.fleft {
+	float: left;
+}
+
+.fright {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.clearfix {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.italic {
+	font-weight: italic;
+}
+
+.big {
+	font-size: 1.25em;
+}
+
+.small {
+	font-size: .75em;
+}
+
+.jserror {
+	span {
+		padding-left: 24px;
+		background-image: url(#{$img}/invalid.png) 3px 3px no-repeat;
+		color: #FB0F00;
+	}
+}
+
+.jssuccess {
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background: url(#{$img}/valid.png) no-repeat;
+}

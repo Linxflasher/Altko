@@ -1,0 +1,49 @@
+.newsletter {
+	margin: 20px 0;
+	background: $light-gray;
+	padding: 10px 80px;
+	&:after {
+		@extend .clearfix;
+	}
+	.subscribe {
+		width: 540px;
+		padding-left: 75px;
+		@include font-size(18px);
+		font-weight: bold;
+		color: white;
+		position: relative;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 6px;
+			left: 0;
+			@include background-image-retina(#{$img}letter, png, 54px, 37px);
+			width: 54px;
+			height: 37px;
+		}
+		span {
+			text-decoration: underline;
+		}
+	}
+	.send {
+		width: 290px;
+		margin-top: 8px;
+		font-size: 0;
+		.n-input {
+			width: 195px;
+			height: 30px;
+			line-height: normal;
+			vertical-align: top;
+		}
+		.submit-btn {
+			width: 95px;
+			height: 30px;
+			line-height: normal;
+			font-weight: 600;
+			vertical-align: top;
+			&:hover {
+				background-color:  $green;
+			}
+		}
+	}
+}

@@ -1,0 +1,94 @@
+.header {
+	margin-bottom: 35px;
+	&:after {
+		@extend .clearfix;
+	}
+	.h-logo {
+		width: 280px;
+		display: block;
+	}
+	.h-aligner {
+		font-size: 0;
+		display: block;
+		margin-top: 40px;
+		> li {
+			display: inline-block;
+			vertical-align: middle;
+			@include font-size(14px);
+			padding-left: 50px;
+			position: relative;
+			a, span {
+				font-weight: 600;
+				@include font-size(18px);
+				color: $dark-gray;
+				text-decoration: none;
+			}
+			.h-border:before {
+				content: '';
+				position: absolute;
+				left: 25px;
+  				top: -25px;
+				width: 1px;
+				height: 21px;
+				background-color: $light-gray;
+			}
+			.h-border:after {
+				content: '';
+				position: absolute;
+				left: 25px;
+  				bottom:  -25px;
+				width: 1px;
+				height: 21px;
+				background-color: $light-gray;
+			}
+		}
+		.h-phone {
+			width: 230px;
+			&:before {
+				content: '';
+				position: absolute;
+				width: 26px;
+				height: 26px;
+				@include background-image-retina(#{$img}i-phone, png, 26px, 52px);
+			    background-position: 0 -26px;
+				left: 12px;
+  				top: 7px;
+			}
+			&:hover:before {
+				background-position: 0 0;
+			}
+		}
+		.h-email {
+			width: 250px;
+			&:before {
+				content: '';
+				position: absolute;
+				width: 24px;
+				height: 16px;
+				@include background-image-retina(#{$img}i-mail, png, 24px, 32px);
+				background-position: 0 -16px;
+				left: 13px;
+  				top: 12px;
+			}
+			&:hover:before {
+				background-position: 0 0;
+			}
+		}
+		.h-skype {
+			width: 160px;
+			&:before {
+				content: '';
+				position: absolute;
+				width: 23px;
+				height: 24px;
+				@include background-image-retina(#{$img}i-skype, png, 23px, 48px);
+				background-position: 0 -24px;
+				left: 13px;
+  				top: 9px;
+			}
+			&:hover:before {
+				background-position: 0 0;
+			}
+		}
+	}
+}

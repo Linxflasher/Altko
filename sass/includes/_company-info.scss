@@ -1,0 +1,27 @@
+.company-info {
+	margin: 0 0 20px 0;
+}
+
+
+
+.company-features {
+	margin-top: 30px;
+	font-size: 0;
+	li {
+		width: 25%;
+		display: inline-block;
+		text-align: center;
+		vertical-align: middle;
+		border-left: 2px solid $light-gray;
+		&:first-child {
+			border-left: none;
+		}
+		p {
+			@include font-size(18px);
+			font-weight: 600;
+			color: $dark-gray;
+			text-transform: uppercase;
+			margin-top: 35px;
+		}
+	}
+}

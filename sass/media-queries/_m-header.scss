@@ -1,0 +1,47 @@
+@media screen and (max-width: 1000px) {
+	.header {
+		.h-logo {
+			float: none;
+			margin: 0 auto;
+		}
+		.h-aligner {
+			float: none;
+			text-align: center;
+			margin: 70px 0 20px 0;
+		}
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.header .h-aligner {
+		margin: 0;
+		> li {
+			display: block;
+			margin: 30px auto;
+			padding-left: 0;
+			@include font-size(20px);
+			span, a {
+				@include font-size(25px);
+			}
+			.h-border:before,
+			.h-border:after {
+				width: 0;
+				height: 0;
+				background: none;
+				left: 0;
+				bottom: 0;
+			}
+		}
+	}
+	.header .h-aligner > .h-phone,
+	.header .h-aligner > .h-email,
+	.header .h-aligner > .h-skype {
+		width: 100%;
+		&:before {
+			background: none;
+			width: 0;
+			height: 0;
+		}
+	}
+}
+

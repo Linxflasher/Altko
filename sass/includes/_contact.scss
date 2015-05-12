@@ -1,0 +1,71 @@
+.map {
+	width: 600px;
+	border: 1px solid $light-gray;
+}
+
+.contact-info {
+	width: 375px;
+	margin-left: 25px;
+	p {
+		display: block;
+		margin-bottom: 35px;
+		@include font-size(18px);
+		padding-left: 40px;
+		position: relative;
+		span, a {
+			font-weight: bold;
+			color: $dark-gray;
+		}
+		a {
+			text-decoration: none;
+			&:hover {
+				color: $green;
+			}
+		}
+	}
+	.c-phone:after {
+		content: '';
+		position: absolute;
+		top: 5px;
+		left: -15px;
+		background: url(#{$img}contact-icons.png) 0 0 no-repeat;
+		width: 42px;
+		height: 37px;
+	}
+	.c-mobile:after {
+		content: '';
+		position: absolute;
+		top: 5px;
+		left: -4px;
+		background: url(#{$img}contact-icons.png) -11px -37px no-repeat;
+		width: 21px;
+		height: 35px;
+	}
+	.c-email:after {
+		content: '';
+		position: absolute;
+		top: 10px;
+		left: -12px;
+		background: url(#{$img}contact-icons.png) -3px -72px no-repeat;
+		width: 37px;
+		height: 26px;
+	}
+	.c-skype:after {
+		content: '';
+		position: absolute;
+		top: 7px;
+		left: -12px;
+		background: url(#{$img}contact-icons.png) -3px -98px no-repeat;
+		width: 38px;
+		height: 38px;
+	}
+	.c-address:after {
+		content: '';
+		position: absolute;
+		top: 7px;
+		left: -12px;
+		background: url(#{$img}contact-icons.png) -3px -136px no-repeat;
+		width: 37px;
+		height: 54px;
+	}
+}

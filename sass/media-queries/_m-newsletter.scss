@@ -1,0 +1,45 @@
+@media screen and (max-width: 1000px) {
+	.newsletter {
+		padding: 10px 2%;
+		.subscribe {
+			width: 100%;
+			float: none;
+			text-align: center;
+			padding: 50px 0 0 0;
+			&:before {
+				left: 50%;
+			}
+		}
+	}
+	.newsletter .send {
+		float: none;
+		width: 100%;
+		margin: 10px 0;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 630px) {
+	.newsletter .subscribe {
+		padding: 0;
+		&:before {
+			width: 0;
+			height: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 460px) {
+	.newsletter .send .n-input {
+		display: block;
+		margin: 10px auto 0 auto;
+		padding-left: 0;
+		text-align: center;
+		width: 205px;
+		height: 50px;
+	}
+	.newsletter .send .submit-btn {
+		width: 205px;
+		height: 50px;
+	}
+}

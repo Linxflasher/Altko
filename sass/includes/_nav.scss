@@ -1,0 +1,62 @@
+.nav {
+	border-top: 1px solid $light-gray;
+	border-bottom: 1px solid $light-gray;
+	.nav-list {
+		font-size: 0;
+		> li {
+			display: inline-block;
+			padding: 7px 0;
+			position: relative;
+			border-left: 1px solid $light-gray;
+			line-height: normal;
+			&:first-child {
+				border-left: none;
+			}
+			&:hover ul {
+				display: block;
+			}
+			> a {
+				display: block;
+				padding: 12px 10px;
+				@include font-size(18px);
+				font-weight: 600;
+				text-transform: uppercase;
+				text-decoration: none;
+				text-align: center;
+				color: $nav-link;
+				&:hover {
+					color: $azure;
+				}
+			}
+			ul {
+				width: 100%;
+				display: none;
+				padding: 10px 0;
+				position: absolute;
+				top: 62px;
+				left: 0;
+				z-index: 100;
+				background: white;
+				@include font-size(18px);
+				li {
+					border: none;
+					a {
+						display: block;
+						padding: 10px 30px;
+						color: $nav-link-secondary;
+						text-decoration: none;
+						&:hover {
+							color: $azure;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@-moz-document url-prefix() {
+	.nav-list > li > ul {
+		top: 63px !important;
+	}
+}

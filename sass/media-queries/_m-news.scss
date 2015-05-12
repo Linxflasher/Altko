@@ -1,0 +1,25 @@
+@media screen and (max-width: 750px) {
+	.news {
+		padding: 0;
+		text-align: center;
+		.news-item {
+			width: 42.2%;
+			margin: 0 15px 20px 15px;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.news {
+		padding-top: 30px;
+		border-top: 4px solid #3ba4b5;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.news .news-item {
+		width: 90%;
+		display: block;
+		margin: 0 auto 20px auto;
+	}
+}
